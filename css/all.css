@@ -1,0 +1,281 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	/* min-width: 1620px; */
+	font-size: 0.875rem;
+}
+
+a {
+	text-decoration: none;
+	color: #55aaff;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.center {
+	padding: 0 300px;
+}
+
+header {
+	/* min-width: 1620px; */
+	width: 100%;
+	/* height: 6.25rem; */
+	position: fixed;
+	z-index: 99999999;
+	top: -6.25rem;
+	left: 0;
+	background: rgba(69, 90, 100, 0.7);
+	backdrop-filter:  blur(5px); /* saturate(100%) 色相变化 100%为不变*/
+	transition: top 0.5s;
+}
+.headerUp{
+	top: 0;
+}
+
+nav {
+	/* width: 1620px;
+	min-width: 1620px; */
+	margin: 0 auto;
+	position: relative;
+}
+header ul{
+	text-align: center;
+}
+header ul li{
+	font-size: 1.5rem;
+	display: inline-block;
+	height: 6.25rem;
+	line-height: 6.25rem;
+	position: relative;
+	margin: 0 1.25rem;
+	color: #fff;
+	cursor: pointer;
+}
+header ul li a{
+	color: #fff;
+	display: inline-block;
+	height: 6.25rem;
+	line-height: 6.25rem;
+	width: 100%;
+}
+header ul li.xz{
+	/* background-color: #9bcdff; */
+}
+header ul li.xz::after{
+	width: 100%;
+	left: 0%;
+}
+header ul li:hover::after{
+	width: 100%;
+	left: 0%;
+}
+header ul li::after{
+	content: "";
+	position: absolute;
+	width: 0;
+	display: block;
+	height: 0.125rem;
+	left: 50%;
+	bottom: 30%;
+	background-color: #55aaff;
+	transition: all 0.5s;
+}
+.logo {
+	float: left;
+	position: absolute;
+	left: 45%;
+}
+footer{
+	border-top: 1px solid #ccc;
+	height: 6.25rem;
+	font-size: 1.875rem;
+	text-align: center;
+	line-height: 6.25rem;
+}
+.conten{
+	width: 100%;
+}
+.banner{
+	height: 100vh;
+	background-color: #000;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	color: #fff;
+	text-align: center;
+	position: relative;
+}
+/* .banner img{
+	width: 100%;
+} */
+.mask{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+}
+.banner h1{
+	position: relative;
+	top: 45%;
+	font-size: 4.375rem;
+}
+.banner p{
+	position: absolute;
+	display: inline-block;
+	width: 228px;
+	top: 60%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	font-size: 1.875rem;
+	cursor: pointer;
+}
+.banner p span{
+	position: relative;
+	display: inline-block;
+	animation: banner_span 2s infinite;
+}
+@keyframes banner_span{
+	0%{top: -0.3125rem;}
+	50%{top: 0.625rem;}
+	100%{top: -0.3125rem;}
+}
+
+header .span{
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 45px;
+	height: 45px;
+	float: right;
+	margin-right: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+	display: none;
+}
+header .span span{
+	display: block;
+	width: 40px;
+	height: 4px;
+	background-color: #fff;
+	margin: 10px 0 ;
+	transition: all 0.5s;
+	border-radius: 5px;
+}
+header .span span:first-child,
+header .span span:last-child{
+	transform-origin: left;
+}
+header .span.xz span:first-child{
+	transform: rotate(45deg);
+}
+header .span.xz span:nth-child(2){
+	width: 0;
+	opacity: 0;
+}
+header .span.xz span:last-child{
+	transform: rotate(-45deg);
+}
+
+
+/* @media screen and (min-width: 768px) {
+	
+	header .span{
+		display: block;
+	}
+} */
+@media screen and (min-width: 768px) {}
+@media screen and (max-width: 980px) {
+	header .span{
+		display: block;
+		z-index: 999;
+	}
+	
+	header .span.xz+ul{
+		height: 300px;
+	}
+	
+	header ul{
+		position: relative;
+		padding-top: 60px;
+		text-align: center;
+		height: 0;
+		overflow: hidden;
+		transition: all 0.5s;
+	}
+	header ul li{
+		font-size: 24px;
+		display: block;
+		height: 60px;
+		line-height: 60px;
+		position: relative;
+		margin: 0 0;
+		color: #fff;
+		cursor: pointer;
+	}
+	header ul li a{
+		color: #fff;
+		display: inline-block;
+		height: 60px;
+		line-height: 60px;
+		width: 100%;
+	}
+	header ul li.xz{
+		background-color: #55aaff;
+	}
+	header ul li.xz::after{
+		width: 100%;
+		left: 0%;
+	}
+	header ul li:hover::after{
+		width: 100%;
+		left: 0%;
+	}
+	header ul li::after{
+		content: "";
+		position: absolute;
+		width: 0;
+		display: block;
+		height: 0.125rem;
+		left: 50%;
+		bottom: 30%;
+		background-color: #55aaff;
+		transition: all 0.5s;
+		display: none;
+	}
+	.banner h1{
+		position: relative;
+		top: 45%;
+		font-size: 60px;
+	}
+	.banner p{
+		position: absolute;
+		display: inline-block;
+		width: 228px;
+		top: 60%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		font-size: 26px;
+		cursor: pointer;
+	}
+	
+	.center {
+		padding: 0 20px;
+	}
+	
+	footer{
+		border-top: 1px solid #ccc;
+		height: 40px;
+		font-size: 18px;
+		text-align: center;
+		line-height: 40px;
+	}
+}
+

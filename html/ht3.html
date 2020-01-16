@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<link rel="shortcut icon" href="../img/heder_icon.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/all.css" />
+		<link rel="stylesheet" type="text/css" href="../css/ht1.css" />
+		<script src="../js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/header.js"></script>
+		<title>我的作品</title>
+	</head>
+	<body>
+		<div class="conten">
+			<div class="banner" style="background-image: url(../img/bg_5.jpg);">
+				<div class="mask"></div>
+				<h1>我的作品</h1>
+				<p><span>&#8595;</span> 点击往下看看 <span>&#8595;</span></p>
+			</div>
+
+
+			<div class="center">
+				<div class="con2">
+					<h1>官网类首页</h1>
+					<div class="my_zp1">
+						<div class="text">
+							<h3>凉凉环保集团</h3>
+							<p>根据某个网站的UI，设计出UI类似内容不同的网页；</p>
+							<p>使用HTML，CSS，jQuery代码写出已设计UI的网站；</p>
+							<span><a href="http://ayd61.work/" target="_blank">前往查看</a></span>
+						</div>
+						<div class="img">
+							<img src="../img/zuop_2_1.jpg">
+							<img src="../img/zuop_2_2.jpg">
+							<img src="../img/zuop_2_3.jpg">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="con2 mask_bg" style="background-image: url(../img/bg_14.jpg);">
+				<div class="center">
+					<h1>官网类首页</h1>
+					<div class="my_zp1 my_zp2">
+						<div class="img">
+							<img src="../img/zuop_3_3.jpg">
+							<img src="../img/zuop_3_2.jpg">
+							<img src="../img/zuop_3_1.jpg">
+						</div>
+						<div class="text">
+							<h3>粉之都美食网站</h3>
+							<p>根据某个美食网站内容，自己单独设计出新的UI；</p>
+							<p>在网上找某个美食网站，进行内容提取，为美食网站进行翻新，或者自定义修改；</p>
+							<span><a href="https://ayd61.github.io/" target="_blank">前往查看</a></span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="center">
+				<div class="con2">
+					<h1>新闻类网站</h1>
+					<div class="my_zp1">
+						<div class="text">
+							<h3>利用JSON做的简单新闻网页</h3>
+							<p>使用getJSON方法调取本地JSON文件获取数据展示到页面上；</p>
+							<p>随机输出一句话的假人工客服（需要登录）；</p>
+							<span><a href="https://ayd61.github.io/ChuXue-JOSN/" target="_blank">前往查看</a></span>
+						</div>
+						<div class="img">
+							<img src="../img/zuop_1_3.jpg">
+							<img src="../img/zuop_1_1.jpg">
+							<img src="../img/zuop_1_2.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="con2 mask_bg" style="background-image: url(../img/bg_15.jpg);">
+				<div class="center">
+					<h1>展示类网站</h1>
+					<div class="my_zp1 my_zp2">
+						<div class="img">
+							<img src="../img/zuop_4_3.jpg">
+							<img src="../img/zuop_4_2.jpg">
+							<img src="../img/zuop_4_1.jpg">
+						</div>
+						<div class="text">
+							<h3>厉害了，中国桥</h3>
+							<p>专业内4人组队参加省级第13届广西大学生计算机应用大赛（网页大赛）；</p>
+							<p>负责一部分网页的HTML，CSS，jQuery代码编写；</p>
+							<p>利用网络寻找jQuery、JavaScript特效模板进行更改，用到制作网站上；</p>
+							<p>荣获第13届广西大学生计算机应用大赛（网页大赛）一等奖；</p>
+							<span><a href="http://cac.gxcme.edu.cn/2019/web01/index.html" target="_blank">前往查看</a></span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="mask_img" style="display: none;">
+			<img src="../img/toux.jpg">
+			<span>X</span>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".my_zp1 .img img").click(function() {
+			var src = $(this).attr("src");
+			$(".mask_img img").attr("src", src);
+			$(".mask_img").addClass("xz");
+			$(".mask_img").fadeIn();
+		})
+		$(".mask_img span").click(function() {
+			$(".mask_img").fadeOut();
+			$(".mask_img").removeClass("xz");
+			event.stopPropagation(); //阻止冒泡事件
+		})
+		$(".mask_img").click(function() {
+			$(".mask_img").fadeOut();
+			$(".mask_img").removeClass("xz");
+			event.stopPropagation(); //阻止冒泡事件
+		})
+		$(".mask_img img").click(function() {
+			event.stopPropagation(); //阻止冒泡事件
+		})
+	</script>
+</html>
